@@ -1,0 +1,15 @@
+{
+    "extends": "@repo/typescript-config/tsconfig.base.json",
+    "compilerOptions": {
+        "typeRoots": [
+            "node_modules/@types",
+        ],
+    },
+    "files": [
+        "eslint.config.js",
+    ],
+    "include": [
+        "node",
+        "packages",
+    ],
+}

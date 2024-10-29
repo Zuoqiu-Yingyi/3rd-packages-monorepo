@@ -1,5 +1,9 @@
 # 更改日志 | Change Log
 
+## 2024-10-29
+
+- 使用 `Turborepo` 初始化工作空间 | Initialize workspace using `Turborepo`
+
 ## 2024-10-28
 
 - 添加 `EditorConfig` 配置文件 | Add `EditorConfig` configuration file
