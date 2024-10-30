@@ -9,13 +9,15 @@
     "scripts": {
         "build": "turbo build",
         "dev": "turbo dev",
-        "lint": "turbo lint"
+        "lint": "turbo lint",
+        "check:cspell": "cspell ."
     },
     "dependencies": {
         "@repo/eslint-config": "workspace:*",
         "@repo/typescript-config": "workspace:*"
     },
     "devDependencies": {
+        "cspell": "^8.16.1",
         "eslint": "^9.16.0",
         "prettier": "^3.4.2",
         "svelte": "^5.8.1",

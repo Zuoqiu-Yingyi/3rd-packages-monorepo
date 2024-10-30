@@ -1,5 +1,9 @@
 # 更改日志 | Change Log
 
+## 2024-10-30
+
+- 添加 `cspell` 配置文件 | Add `cspell` configuration file
+
 ## 2024-10-29
 
 - 使用 `Turborepo` 初始化工作空间 | Initialize workspace using `Turborepo`
