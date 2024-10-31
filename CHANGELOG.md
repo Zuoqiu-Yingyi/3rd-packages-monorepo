@@ -1,5 +1,9 @@
 # 更改日志 | Change Log
 
+## 2024-10-31
+
+- 添加 `husky` 配置文件 | Add `husky` configuration file
+
 ## 2024-10-30
 
 - 添加 `cspell` 配置文件 | Add `cspell` configuration file
