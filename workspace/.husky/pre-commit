@@ -2,4 +2,6 @@
 
 cd workspace
 
+pnpm lint-staged
+
 exit 0

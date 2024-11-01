@@ -8,6 +8,7 @@
     },
     "scripts": {
         "prepare": "cd ./.. && husky ./workspace/.husky",
+        "lint-staged": "lint-staged --allow-empty",
         "build": "turbo build",
         "dev": "turbo dev",
         "lint": "turbo lint",
@@ -18,9 +19,12 @@
         "@repo/typescript-config": "workspace:*"
     },
     "devDependencies": {
+        "@types/lint-staged": "^13.3.0",
+        "@types/node": "^22.10.1",
         "cspell": "^8.16.1",
         "eslint": "^9.16.0",
         "husky": "^9.1.7",
+        "lint-staged": "^15.2.10",
         "prettier": "^3.4.2",
         "svelte": "^5.8.1",
         "turbo": "^2.3.3",

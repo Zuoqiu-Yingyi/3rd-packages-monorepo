@@ -7,6 +7,7 @@
     },
     "files": [
         "eslint.config.js",
+        "lint-staged.config.js",
     ],
     "include": [
         "node",

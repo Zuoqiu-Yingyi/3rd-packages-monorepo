@@ -1,0 +1,11 @@
+/**
+ * @type {import("lint-staged").Config}
+ * @see {@link https://www.npmjs.com/package/lint-staged | lint-staged}
+ */
+const config = {
+    // REF: https://github.com/sudo-suhas/lint-staged-django-react-demo
+    "*": "cspell lint --no-must-find-files",
+    "*.{js,ts,jsx,tsx,vue,svelte,md,json,toml,yaml}": "eslint --fix",
+};
+
+export default config;
