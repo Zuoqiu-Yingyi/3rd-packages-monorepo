@@ -1,5 +1,9 @@
 # 更改日志 | Change Log
 
+## 2024-11-04
+
+- 添加 `commitlint` 配置文件 | Add `commitlint` configuration file
+
 ## 2024-11-01
 
 - 添加 `lint-staged` 配置文件 | Add `lint-staged` configuration file
