@@ -1,6 +1,7 @@
 {
     "recommendations": [
         "folke.vscode-monorepo-workspace",
-        "dbaeumer.vscode-eslint"
+        "dbaeumer.vscode-eslint",
+        "thenuprojectcontributors.vscode-nushell-lang"
     ]
 }

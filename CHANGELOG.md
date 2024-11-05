@@ -1,5 +1,9 @@
 # 更改日志 | Change Log
 
+## 2024-11-05
+
+- 添加依赖管理脚本 | Add dependency management script
+
 ## 2024-11-04
 
 - 添加 `commitlint` 配置文件 | Add `commitlint` configuration file

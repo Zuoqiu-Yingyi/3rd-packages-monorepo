@@ -9,6 +9,9 @@
     "scripts": {
         "prepare": "cd ./.. && husky ./workspace/.husky",
         "lint-staged": "lint-staged --allow-empty",
+        "outdated:all": "nu ./scripts/outdated.nu",
+        "update:all": "nu ./scripts/update.nu",
+        "prune:all": "nu ./scripts/prune.nu",
         "build": "turbo build",
         "dev": "turbo dev",
         "lint": "turbo lint",
@@ -28,6 +31,7 @@
         "eslint": "^9.16.0",
         "husky": "^9.1.7",
         "lint-staged": "^15.2.10",
+        "nushell": "^0.100.0",
         "prettier": "^3.4.2",
         "svelte": "^5.9.0",
         "turbo": "^2.3.3",
