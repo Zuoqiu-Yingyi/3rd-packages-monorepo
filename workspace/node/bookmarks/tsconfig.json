@@ -1,0 +1,19 @@
+{
+    "extends": "@repo/typescript-config/tsconfig.base.json",
+    "compilerOptions": {
+        "baseUrl": "./",
+        "paths": {
+            "~/*": [
+                "./*",
+            ],
+            "@/*": [
+                "src/*",
+            ],
+        },
+    },
+    "include": [
+        "src",
+        "tests",
+        "vite.config.ts",
+    ],
+}

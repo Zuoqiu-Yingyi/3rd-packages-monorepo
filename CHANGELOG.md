@@ -1,5 +1,9 @@
 # 更改日志 | Change Log
 
+## 2024-11-06
+
+- 初始化 Node 包 `bookmarks` | Initialize Node package `bookmarks`
+
 ## 2024-11-05
 
 - 添加依赖管理脚本 | Add dependency management script

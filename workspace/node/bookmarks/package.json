@@ -1,0 +1,59 @@
+{
+    "name": "bookmarks",
+    "type": "module",
+    "version": "0.0.0",
+    "packageManager": "pnpm@9.0.0",
+    "description": "Browser bookmark file parsing and conversion tool",
+    "author": {
+        "name": "Zuoqiu Yingyi",
+        "url": "https://github.com/Zuoqiu-Yingyi"
+    },
+    "license": "MIT",
+    "funding": [
+        {
+            "type": "GitHub Sponsors",
+            "url": "https://github.com/sponsors/Zuoqiu-Yingyi"
+        },
+        {
+            "type": "Ko-fi",
+            "url": "https://ko-fi.com/zuoqiu"
+        },
+        {
+            "type": "AFDIAN",
+            "url": "https://afdian.net/a/zuoqiu"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Zuoqiu-Yingyi/3rd-packages-monorepo.git",
+        "directory": "workspace/node/bookmarks"
+    },
+    "keywords": [
+        "browser",
+        "bookmark",
+        "XBEL",
+        "netscape"
+    ],
+    "main": "./dist/index.umd.cjs",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "browser": "./dist/index.iife.js",
+    "files": [
+        "LICENSE",
+        "README.md",
+        "dist",
+        "package.json",
+        "src"
+    ],
+    "engines": {
+        "node": "23"
+    },
+    "scripts": {
+        "lint": "eslint --max-warnings 0 .",
+        "format": "eslint --fix .",
+        "build": "vite build"
+    },
+    "dependencies": {
+        "fast-xml-parser": "^4.5.0"
+    }
+}
