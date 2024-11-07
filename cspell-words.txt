@@ -1,2 +1,6 @@
 commitlint
 dprint
+SHORTCUTURL
+XBEL
+Yingyi
+Zuoqiu

@@ -1,5 +1,9 @@
 # 更改日志 | Change Log
 
+## 2024-11-07
+
+- 构造浏览器书签数据结构 | Construct browser bookmark data structure
+
 ## 2024-11-06
 
 - 初始化 Node 包 `bookmarks` | Initialize Node package `bookmarks`

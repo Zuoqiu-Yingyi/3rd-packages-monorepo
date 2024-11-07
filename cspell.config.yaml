@@ -24,10 +24,10 @@ ignoreRegExpList:
 flagWords: []
 
 ignorePaths:
-  - ./**/.turbo/**
-  - ./**/dist/**
-  - ./**/node_modules/**
-  - ./**/temp/**
+  - .turbo/**
+  - dist/**
+  - node_modules/**
+  - temp/**
 
-  - ./**/package.json
-  - ./**/pnpm-lock.yaml
+  - package.json
+  - pnpm-lock.yaml
