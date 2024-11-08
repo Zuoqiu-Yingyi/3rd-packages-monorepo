@@ -1,5 +1,9 @@
 # 更改日志 | Change Log
 
+## 2024-11-09
+
+- 在模块入口导出书签解析器 | Export bookmark parser in module entry
+
 ## 2024-11-08
 
 - 实现 `XBEL` 格式的书签的解析器 | Implement a parser for bookmarks in `XBEL` format
