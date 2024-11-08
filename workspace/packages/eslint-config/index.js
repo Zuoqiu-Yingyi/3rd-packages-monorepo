@@ -137,13 +137,17 @@ export default antfu({
         quotes: "double",
         semi: true,
         overrides: {
+            "style/arrow-parens": [
+                "warn",
+                "always",
+            ],
             "style/indent-binary-ops": [
                 "off",
                 "tab",
             ],
-            "style/arrow-parens": [
-                "warn",
-                "always",
+            "style/linebreak-style": [
+                "error",
+                "unix",
             ],
             "style/no-trailing-spaces": [
                 "warn",
@@ -151,9 +155,9 @@ export default antfu({
                     ignoreComments: true,
                 },
             ],
-            "style/linebreak-style": [
-                "error",
-                "unix",
+            "style/quote-props": [
+                "warn",
+                "as-needed",
             ],
         },
     },

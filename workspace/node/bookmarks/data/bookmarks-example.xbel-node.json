@@ -1,0 +1,84 @@
+{
+    "type": "root",
+    "text": "",
+    "children": [
+        {
+            "type": "folder",
+            "text": "",
+            "children": [
+                {
+                    "type": "bookmark",
+                    "text": "",
+                    "href": "https://www.python.org",
+                    "info": {
+                        "metadata": [
+                            {
+                                "owner": "John Doe"
+                            }
+                        ]
+                    },
+                    "id": "bookmark1",
+                    "added": "2023-10-01T12:00:00.000Z",
+                    "visited": "2023-10-01T12:00:00.000Z",
+                    "modified": "2023-10-01T12:00:00.000Z"
+                },
+                {
+                    "type": "separator"
+                }
+            ],
+            "info": {
+                "metadata": [
+                    {
+                        "owner": "John Doe"
+                    }
+                ]
+            },
+            "id": "folder1",
+            "added": "2023-10-01T12:00:00.000Z",
+            "folded": false
+        },
+        {
+            "type": "folder",
+            "text": "",
+            "children": [
+                {
+                    "type": "bookmark",
+                    "text": "",
+                    "href": "https://developer.mozilla.org",
+                    "info": {
+                        "metadata": [
+                            {
+                                "owner": "John Doe"
+                            }
+                        ]
+                    },
+                    "id": "bookmark2",
+                    "added": "2023-10-01T12:00:00.000Z",
+                    "visited": "2023-10-01T12:00:00.000Z",
+                    "modified": "2023-10-01T12:00:00.000Z"
+                },
+                {
+                    "type": "separator"
+                }
+            ],
+            "info": {
+                "metadata": [
+                    {
+                        "owner": "John Doe"
+                    }
+                ]
+            },
+            "id": "folder2",
+            "added": "2023-10-01T12:00:00.000Z",
+            "folded": true
+        }
+    ],
+    "id": "root",
+    "info": {
+        "metadata": [
+            {
+                "owner": "John Doe"
+            }
+        ]
+    }
+}

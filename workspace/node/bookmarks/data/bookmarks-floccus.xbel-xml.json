@@ -1,0 +1,416 @@
+[
+    {
+        "xbel": [
+            {
+                "folder": [
+                    {
+                        "title": [
+                            {
+                                "$text": "Folder 1"
+                            }
+                        ]
+                    },
+                    {
+                        "folder": [
+                            {
+                                "title": [
+                                    {
+                                        "$text": "Folder 1-1"
+                                    }
+                                ]
+                            },
+                            {
+                                "bookmark": [
+                                    {
+                                        "title": [
+                                            {
+                                                "$text": "Bookmarks 1-1-1"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                ":@": {
+                                    "href": "https://1-1-1.bookmarks.example/",
+                                    "id": "111"
+                                }
+                            }
+                        ],
+                        ":@": {
+                            "id": "11"
+                        }
+                    },
+                    {
+                        "folder": [
+                            {
+                                "title": [
+                                    {
+                                        "$text": "Folder 1-1"
+                                    }
+                                ]
+                            },
+                            {
+                                "bookmark": [
+                                    {
+                                        "title": [
+                                            {
+                                                "$text": "Bookmarks 1-2-1"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                ":@": {
+                                    "href": "https://1-2-1.bookmarks.example/",
+                                    "id": "121"
+                                }
+                            },
+                            {
+                                "bookmark": [
+                                    {
+                                        "title": [
+                                            {
+                                                "$text": "Bookmarks 1-2-2"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                ":@": {
+                                    "href": "https://1-2-2.bookmarks.example/",
+                                    "id": "122"
+                                }
+                            }
+                        ],
+                        ":@": {
+                            "id": "12"
+                        }
+                    },
+                    {
+                        "folder": [
+                            {
+                                "title": [
+                                    {
+                                        "$text": "Folder 1-1"
+                                    }
+                                ]
+                            },
+                            {
+                                "bookmark": [
+                                    {
+                                        "title": [
+                                            {
+                                                "$text": "Bookmarks 1-3-1"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                ":@": {
+                                    "href": "https://1-3-1.bookmarks.example/",
+                                    "id": "131"
+                                }
+                            },
+                            {
+                                "bookmark": [
+                                    {
+                                        "title": [
+                                            {
+                                                "$text": "Bookmarks 1-3-2"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                ":@": {
+                                    "href": "https://1-3-2.bookmarks.example/",
+                                    "id": "132"
+                                }
+                            },
+                            {
+                                "bookmark": [
+                                    {
+                                        "title": [
+                                            {
+                                                "$text": "Bookmarks 1-3-3"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                ":@": {
+                                    "href": "https://1-3-3.bookmarks.example/",
+                                    "id": "133"
+                                }
+                            }
+                        ],
+                        ":@": {
+                            "id": "13"
+                        }
+                    },
+                    {
+                        "bookmark": [
+                            {
+                                "title": [
+                                    {
+                                        "$text": "Bookmarks 1-4"
+                                    }
+                                ]
+                            }
+                        ],
+                        ":@": {
+                            "href": "https://1-4.bookmarks.example/",
+                            "id": "14"
+                        }
+                    },
+                    {
+                        "bookmark": [
+                            {
+                                "title": [
+                                    {
+                                        "$text": "Bookmarks 1-5"
+                                    }
+                                ]
+                            }
+                        ],
+                        ":@": {
+                            "href": "https://1-5.bookmarks.example/",
+                            "id": "15"
+                        }
+                    },
+                    {
+                        "bookmark": [
+                            {
+                                "title": [
+                                    {
+                                        "$text": "Bookmarks 1-6"
+                                    }
+                                ]
+                            }
+                        ],
+                        ":@": {
+                            "href": "https://1-6.bookmarks.example/",
+                            "id": "16"
+                        }
+                    }
+                ],
+                ":@": {
+                    "id": "1"
+                }
+            },
+            {
+                "folder": [
+                    {
+                        "title": [
+                            {
+                                "$text": "Folder 2"
+                            }
+                        ]
+                    }
+                ],
+                ":@": {
+                    "id": "2"
+                }
+            },
+            {
+                "folder": [
+                    {
+                        "title": [
+                            {
+                                "$text": "Folder 3"
+                            }
+                        ]
+                    },
+                    {
+                        "folder": [
+                            {
+                                "title": [
+                                    {
+                                        "$text": "Folder 3-1"
+                                    }
+                                ]
+                            },
+                            {
+                                "folder": [
+                                    {
+                                        "title": [
+                                            {
+                                                "$text": "Folder 3-1-1"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                ":@": {
+                                    "id": "311"
+                                }
+                            }
+                        ],
+                        ":@": {
+                            "id": "31"
+                        }
+                    }
+                ],
+                ":@": {
+                    "id": "3"
+                }
+            },
+            {
+                "folder": [
+                    {
+                        "title": [
+                            {
+                                "$text": "Folder 4"
+                            }
+                        ]
+                    },
+                    {
+                        "folder": [
+                            {
+                                "title": [
+                                    {
+                                        "$text": "Folder 4-1"
+                                    }
+                                ]
+                            }
+                        ],
+                        ":@": {
+                            "id": "41"
+                        }
+                    },
+                    {
+                        "bookmark": [
+                            {
+                                "title": [
+                                    {
+                                        "$text": "Bookmarks 4-2"
+                                    }
+                                ]
+                            }
+                        ],
+                        ":@": {
+                            "href": "https://4-2.bookmarks.example/",
+                            "id": "42"
+                        }
+                    },
+                    {
+                        "folder": [
+                            {
+                                "title": [
+                                    {
+                                        "$text": "Folder 4-3"
+                                    }
+                                ]
+                            }
+                        ],
+                        ":@": {
+                            "id": "43"
+                        }
+                    },
+                    {
+                        "bookmark": [
+                            {
+                                "title": [
+                                    {
+                                        "$text": "Bookmarks 4-4"
+                                    }
+                                ]
+                            }
+                        ],
+                        ":@": {
+                            "href": "https://4-4.bookmarks.example/",
+                            "id": "44"
+                        }
+                    },
+                    {
+                        "folder": [
+                            {
+                                "title": [
+                                    {
+                                        "$text": "Folder 4-5"
+                                    }
+                                ]
+                            }
+                        ],
+                        ":@": {
+                            "id": "45"
+                        }
+                    }
+                ],
+                ":@": {
+                    "id": "4"
+                }
+            },
+            {
+                "bookmark": [
+                    {
+                        "title": [
+                            {
+                                "$text": "Bookmarks 5"
+                            }
+                        ]
+                    }
+                ],
+                ":@": {
+                    "href": "https://5.bookmarks.example/",
+                    "id": "5"
+                }
+            },
+            {
+                "folder": [
+                    {
+                        "title": [
+                            {
+                                "$text": "Folder 6"
+                            }
+                        ]
+                    }
+                ],
+                ":@": {
+                    "id": "6"
+                }
+            },
+            {
+                "bookmark": [
+                    {
+                        "title": [
+                            {
+                                "$text": "Bookmarks 7"
+                            }
+                        ]
+                    }
+                ],
+                ":@": {
+                    "href": "https://7.bookmarks.example/",
+                    "id": "7"
+                }
+            },
+            {
+                "bookmark": [
+                    {
+                        "title": [
+                            {
+                                "$text": "Bookmarks 8"
+                            }
+                        ]
+                    }
+                ],
+                ":@": {
+                    "href": "https://8.bookmarks.example/",
+                    "id": "8"
+                }
+            },
+            {
+                "bookmark": [
+                    {
+                        "title": [
+                            {
+                                "$text": "Bookmarks 9"
+                            }
+                        ]
+                    }
+                ],
+                ":@": {
+                    "href": "https://9.bookmarks.example/",
+                    "id": "9"
+                }
+            }
+        ],
+        ":@": {
+            "version": "1.0"
+        }
+    }
+]

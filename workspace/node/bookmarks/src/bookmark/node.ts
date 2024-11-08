@@ -93,6 +93,12 @@ export interface IFolderNode extends IItemNode {
      */
     modified?: Date;
 
+    /**
+     * XBEL:
+     * - folder: "yes" | "no"
+     */
+    folded?: boolean;
+
     children: TItemNode[];
 }
 

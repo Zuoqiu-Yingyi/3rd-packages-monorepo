@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xbel PUBLIC "+//IDN python.org//DTD XML Bookmark Exchange Language 1.0//EN//XML" "http://pyxml.sourceforge.net/topics/dtds/xbel-1.0.dtd">
+
+<xbel version="1.0" id="root">
+    <title>My Bookmarks</title>
+    <info>
+        <metadata owner="John Doe">
+            <!-- Additional metadata can be added here -->
+        </metadata>
+    </info>
+    <desc>This is a collection of my favorite bookmarks.</desc>
+
+    <!-- Folder -->
+    <folder id="folder1" added="2023-10-01T12:00:00Z" folded="no">
+        <title>Programming</title>
+        <info>
+            <metadata owner="John Doe">
+                <!-- Additional metadata can be added here -->
+            </metadata>
+        </info>
+        <desc>Bookmarks related to programming.</desc>
+
+        <!-- Bookmark -->
+        <bookmark id="bookmark1" added="2023-10-01T12:00:00Z" href="https://www.python.org" visited="2023-10-01T12:00:00Z" modified="2023-10-01T12:00:00Z">
+            <title>Python Official Website</title>
+            <info>
+                <metadata owner="John Doe">
+                    <!-- Additional metadata can be added here -->
+                </metadata>
+            </info>
+            <desc>Official website of the Python programming language.</desc>
+        </bookmark>
+
+        <!-- Separator -->
+        <separator/>
+
+        <!-- Alias -->
+        <alias ref="bookmark1"/>
+    </folder>
+
+    <!-- Another Folder -->
+    <folder id="folder2" added="2023-10-01T12:00:00Z" folded="yes">
+        <title>Web Development</title>
+        <info>
+            <metadata owner="John Doe">
+                <!-- Additional metadata can be added here -->
+            </metadata>
+        </info>
+        <desc>Bookmarks related to web development.</desc>
+
+        <!-- Bookmark -->
+        <bookmark id="bookmark2" added="2023-10-01T12:00:00Z" href="https://developer.mozilla.org" visited="2023-10-01T12:00:00Z" modified="2023-10-01T12:00:00Z">
+            <title>MDN Web Docs</title>
+            <info>
+                <metadata owner="John Doe">
+                    <!-- Additional metadata can be added here -->
+                </metadata>
+            </info>
+            <desc>Resources for web developers from Mozilla.</desc>
+        </bookmark>
+
+        <!-- Separator -->
+        <separator/>
+
+        <!-- Alias -->
+        <alias ref="bookmark2"/>
+    </folder>
+</xbel>

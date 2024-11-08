@@ -1,0 +1,188 @@
+[
+    {
+        "xbel": [
+            {
+                "title": [
+                    {
+                        "$text": "My Bookmarks"
+                    }
+                ]
+            },
+            {
+                "info": [
+                    {
+                        "metadata": [],
+                        ":@": {
+                            "owner": "John Doe"
+                        }
+                    }
+                ]
+            },
+            {
+                "desc": [
+                    {
+                        "$text": "This is a collection of my favorite bookmarks."
+                    }
+                ]
+            },
+            {
+                "folder": [
+                    {
+                        "title": [
+                            {
+                                "$text": "Programming"
+                            }
+                        ]
+                    },
+                    {
+                        "info": [
+                            {
+                                "metadata": [],
+                                ":@": {
+                                    "owner": "John Doe"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "desc": [
+                            {
+                                "$text": "Bookmarks related to programming."
+                            }
+                        ]
+                    },
+                    {
+                        "bookmark": [
+                            {
+                                "title": [
+                                    {
+                                        "$text": "Python Official Website"
+                                    }
+                                ]
+                            },
+                            {
+                                "info": [
+                                    {
+                                        "metadata": [],
+                                        ":@": {
+                                            "owner": "John Doe"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "desc": [
+                                    {
+                                        "$text": "Official website of the Python programming language."
+                                    }
+                                ]
+                            }
+                        ],
+                        ":@": {
+                            "id": "bookmark1",
+                            "added": "2023-10-01T12:00:00Z",
+                            "href": "https://www.python.org",
+                            "visited": "2023-10-01T12:00:00Z",
+                            "modified": "2023-10-01T12:00:00Z"
+                        }
+                    },
+                    {
+                        "separator": []
+                    },
+                    {
+                        "alias": [],
+                        ":@": {
+                            "ref": "bookmark1"
+                        }
+                    }
+                ],
+                ":@": {
+                    "id": "folder1",
+                    "added": "2023-10-01T12:00:00Z",
+                    "folded": "no"
+                }
+            },
+            {
+                "folder": [
+                    {
+                        "title": [
+                            {
+                                "$text": "Web Development"
+                            }
+                        ]
+                    },
+                    {
+                        "info": [
+                            {
+                                "metadata": [],
+                                ":@": {
+                                    "owner": "John Doe"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "desc": [
+                            {
+                                "$text": "Bookmarks related to web development."
+                            }
+                        ]
+                    },
+                    {
+                        "bookmark": [
+                            {
+                                "title": [
+                                    {
+                                        "$text": "MDN Web Docs"
+                                    }
+                                ]
+                            },
+                            {
+                                "info": [
+                                    {
+                                        "metadata": [],
+                                        ":@": {
+                                            "owner": "John Doe"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "desc": [
+                                    {
+                                        "$text": "Resources for web developers from Mozilla."
+                                    }
+                                ]
+                            }
+                        ],
+                        ":@": {
+                            "id": "bookmark2",
+                            "added": "2023-10-01T12:00:00Z",
+                            "href": "https://developer.mozilla.org",
+                            "visited": "2023-10-01T12:00:00Z",
+                            "modified": "2023-10-01T12:00:00Z"
+                        }
+                    },
+                    {
+                        "separator": []
+                    },
+                    {
+                        "alias": [],
+                        ":@": {
+                            "ref": "bookmark2"
+                        }
+                    }
+                ],
+                ":@": {
+                    "id": "folder2",
+                    "added": "2023-10-01T12:00:00Z",
+                    "folded": "yes"
+                }
+            }
+        ],
+        ":@": {
+            "version": "1.0",
+            "id": "root"
+        }
+    }
+]
