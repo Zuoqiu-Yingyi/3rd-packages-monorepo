@@ -28,6 +28,22 @@ export interface IItemNode extends IBaseNode {
     text: string;
 
     /**
+     * XBEL: `<desc>$0</desc>`
+     *
+     * Netscape:
+     * - folder: `<H3 DESCRIPTION="$0">`
+     * - bookmark: `<A DESCRIPTION="$0">`
+     */
+    desc?: string;
+
+    /**
+     * XBEL: `<info>$0</info>`
+     */
+    info?: IInfo;
+}
+
+export interface IItemAttrs {
+    /**
      * XBEL:
      * - root: `<xbel id="$0">`
      * - folder: `<folder id="$0">`
@@ -40,15 +56,6 @@ export interface IItemNode extends IBaseNode {
     id?: string;
 
     /**
-     * XBEL: `<desc>$0</desc>`
-     *
-     * Netscape:
-     * - folder: `<H3 DESCRIPTION="$0">`
-     * - bookmark: `<A DESCRIPTION="$0">`
-     */
-    desc?: string;
-
-    /**
      * XBEL: CDATA (ISO 8601)
      * - root: `<xbel added="$0">`
      * - folder: `<folder added="$0">`
@@ -59,16 +66,9 @@ export interface IItemNode extends IBaseNode {
      * - bookmark: `<A ADD_DATE="$0">`
      */
     added?: Date;
-
-    /**
-     * XBEL: `<info>$0</info>`
-     */
-    info?: IInfo;
 }
 
-export interface IRootNode extends IItemNode {
-    type: NodeType.ROOT;
-
+export interface IRootAttrs extends IItemAttrs {
     /**
      * Netscape:
      * - root: `<title>$0</title>`
@@ -80,13 +80,9 @@ export interface IRootNode extends IItemNode {
      * - root: `<xbel version="1.0">`
      */
     version?: "1.0";
-
-    children: TItemNode[];
 }
 
-export interface IFolderNode extends IItemNode {
-    type: NodeType.FOLDER;
-
+export interface IFolderAttrs extends IItemAttrs {
     /**
      * Netscape: Unix timestamp (seconds)
      * - folder: `<H3 LAST_MODIFIED="$0">`
@@ -98,13 +94,9 @@ export interface IFolderNode extends IItemNode {
      * - folder: "yes" | "no"
      */
     folded?: boolean;
-
-    children: TItemNode[];
 }
 
-export interface IBookmarkNode extends IItemNode {
-    type: NodeType.BOOKMARK;
-
+export interface IBookmarkAttrs extends IItemAttrs {
     /**
      * XBEL: URL
      * - bookmark: `<bookmark href="$0">`
@@ -164,19 +156,39 @@ export interface IBookmarkNode extends IItemNode {
     shortcut_url?: string;
 }
 
+export interface IAliasAttrs {
+    /**
+     * to reference the ID of other node
+     *
+     * XBEL: `<alias ref="$0">`
+     */
+    ref: string;
+}
+
+export interface IRootNode extends IItemNode {
+    type: NodeType.ROOT;
+    attrs: IRootAttrs & Record<string, string>;
+    children: TItemNode[];
+}
+
+export interface IFolderNode extends IItemNode {
+    type: NodeType.FOLDER;
+    attrs: IFolderAttrs & Record<string, string>;
+    children: TItemNode[];
+}
+
+export interface IBookmarkNode extends IItemNode {
+    type: NodeType.BOOKMARK;
+    attrs: IBookmarkAttrs & Record<string, string>;
+}
+
 export interface ISeparatorNode extends IBaseNode {
     type: NodeType.SEPARATOR;
 }
 
 export interface IAliasNode extends IBaseNode {
     type: NodeType.ALIAS;
-
-    /**
-     * Reference the ID of other node
-     *
-     * XBEL: `<alias ref="$0">`
-     */
-    ref: string;
+    attrs: IAliasAttrs;
 }
 
 export interface IInfo {

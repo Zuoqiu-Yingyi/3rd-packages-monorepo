@@ -7,6 +7,7 @@ import {
 
 import {
     NodeType,
+    type IBookmarkAttrs,
     type IBookmarkNode,
     type IFolderNode,
     type IInfo,
@@ -104,28 +105,36 @@ export class XBELParser {
     }
 
     private _getXbelRootNode(xbel: IXbelNode): IRootNode {
+        const xbel_children = xbel.xbel;
+        const xbel_attrs = xbel[":@"];
+
         const root: IRootNode = {
             type: NodeType.ROOT,
-            text: "",
-            children: [],
+            text: this._getXbelItemTitle(xbel_children) ?? "",
+            attrs: Object.entries(xbel_attrs).reduce<Record<string, any>>((attrs, [key, value]) => {
+                switch (key) {
+                    case "added":
+                        attrs[key] = new Date(value as string);
+                        break;
+
+                    default:
+                        attrs[key] = value;
+                        break;
+                }
+                return attrs;
+            }, {}),
+            children: this._getItems(xbel_children),
         };
 
-        if ("id" in xbel[":@"]) {
-            root.id = xbel[":@"].id;
-        }
-
-        root.text = this._getXbelItemTitle(xbel.xbel) ?? "";
-
-        const desc = this._getXbelItemDesc(xbel.xbel);
+        const desc = this._getXbelItemDesc(xbel_children);
         if (desc != null) {
             root.desc = desc;
         }
-        const info = this._getXbelItemInfo(xbel.xbel);
+        const info = this._getXbelItemInfo(xbel_children);
         if (info != null) {
             root.info = info;
         }
 
-        root.children = this._getItems(xbel.xbel);
         return root;
     }
 
@@ -172,7 +181,20 @@ export class XBELParser {
                         const bookmark: IBookmarkNode = {
                             type: NodeType.BOOKMARK,
                             text: this._getXbelItemTitle(bookmark_children) ?? "",
-                            href: bookmark_attrs.href,
+                            attrs: Object.entries(bookmark_attrs).reduce<Record<string, any>>((attrs, [key, value]) => {
+                                switch (key) {
+                                    case "added":
+                                    case "visited":
+                                    case "modified":
+                                        attrs[key] = new Date(value as string);
+                                        break;
+
+                                    default:
+                                        attrs[key] = value;
+                                        break;
+                                }
+                                return attrs;
+                            }, {}) as IBookmarkAttrs & Record<string, string>,
                         };
 
                         const desc = this._getXbelItemDesc(bookmark_children);
@@ -184,18 +206,6 @@ export class XBELParser {
                             bookmark.info = info;
                         }
 
-                        if (bookmark_attrs.id != null) {
-                            bookmark.id = bookmark_attrs.id;
-                        }
-                        if (bookmark_attrs.added != null) {
-                            bookmark.added = new Date(bookmark_attrs.added);
-                        }
-                        if (bookmark_attrs.visited != null) {
-                            bookmark.visited = new Date(bookmark_attrs.visited);
-                        }
-                        if (bookmark_attrs.modified != null) {
-                            bookmark.modified = new Date(bookmark_attrs.modified);
-                        }
                         items.push(bookmark);
                         break;
                     }
@@ -206,6 +216,21 @@ export class XBELParser {
                         const folder: IFolderNode = {
                             type: NodeType.FOLDER,
                             text: this._getXbelItemTitle(folder_children) ?? "",
+                            attrs: Object.entries(folder_attrs).reduce<Record<string, any>>((attrs, [key, value]) => {
+                                switch (key) {
+                                    case "added":
+                                        attrs[key] = new Date(value as string);
+                                        break;
+                                    case "folded":
+                                        attrs[key] = !(value === "no");
+                                        break;
+
+                                    default:
+                                        attrs[key] = value;
+                                        break;
+                                }
+                                return attrs;
+                            }, {}),
                             children: this._getItems(folder_children),
                         };
 
@@ -218,15 +243,6 @@ export class XBELParser {
                             folder.info = info;
                         }
 
-                        if (folder_attrs.id != null) {
-                            folder.id = folder_attrs.id;
-                        }
-                        if (folder_attrs.added != null) {
-                            folder.added = new Date(folder_attrs.added);
-                        }
-                        if (folder_attrs.folded != null) {
-                            folder.folded = !(folder_attrs.folded === "no");
-                        }
                         items.push(folder);
                         break;
                     }

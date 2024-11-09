@@ -1,5 +1,9 @@
 # 更改日志 | Change Log
 
+## 2024-11-10
+
+- `XBEL` 格式的书签的解析器支持扩展属性 | `XBEL` format bookmark parser supports extended attributes
+
 ## 2024-11-09
 
 - 在模块入口导出书签解析器 | Export bookmark parser in module entry
