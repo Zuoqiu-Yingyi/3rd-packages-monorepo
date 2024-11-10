@@ -184,11 +184,12 @@ export interface IBookmarkNode extends IItemNode {
 
 export interface ISeparatorNode extends IBaseNode {
     type: NodeType.SEPARATOR;
+    attrs: Record<string, string>;
 }
 
 export interface IAliasNode extends IBaseNode {
     type: NodeType.ALIAS;
-    attrs: IAliasAttrs;
+    attrs: IAliasAttrs & Record<string, string>;
 }
 
 export interface IInfo {

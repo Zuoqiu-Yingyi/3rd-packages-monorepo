@@ -1,5 +1,9 @@
 # 更改日志 | Change Log
 
+## 2024-11-11
+
+- 更新 `XBEL` 格式的书签解析器的测试用例 | Update the test case for the bookmark parser with `XBEL` format
+
 ## 2024-11-10
 
 - `XBEL` 格式的书签的解析器支持扩展属性 | `XBEL` format bookmark parser supports extended attributes

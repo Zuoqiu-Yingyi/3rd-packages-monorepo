@@ -43,7 +43,7 @@ describe("xbel parser test", async () => {
         const bookmarks_xml = await readFile("./data/bookmarks-example.xbel", "utf-8");
 
         const bookmarks_xml_objects = parser.parser.parse(bookmarks_xml);
-        // console.log(JSON.stringify(bookmarks, null, 4));
+        // console.log(JSON.stringify(bookmarks_xml_objects, null, 4));
         expect(
             bookmarks_xml_objects,
             "XML objects",
@@ -61,7 +61,7 @@ describe("xbel parser test", async () => {
         const bookmarks_xml = await readFile("./data/bookmarks-floccus.xbel", "utf-8");
 
         const bookmarks_xml_objects = parser.parser.parse(bookmarks_xml);
-        // console.log(JSON.stringify(bookmarks, null, 4));
+        // console.log(JSON.stringify(bookmarks_xml_objects, null, 4));
         expect(
             bookmarks_xml_objects,
             "XML objects",

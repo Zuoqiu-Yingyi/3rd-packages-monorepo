@@ -83,7 +83,8 @@
                             "added": "2023-10-01T12:00:00Z",
                             "href": "https://www.python.org",
                             "visited": "2023-10-01T12:00:00Z",
-                            "modified": "2023-10-01T12:00:00Z"
+                            "modified": "2023-10-01T12:00:00Z",
+                            "tags": "bookmark,1"
                         }
                     },
                     {
@@ -160,7 +161,8 @@
                             "added": "2023-10-01T12:00:00Z",
                             "href": "https://developer.mozilla.org",
                             "visited": "2023-10-01T12:00:00Z",
-                            "modified": "2023-10-01T12:00:00Z"
+                            "modified": "2023-10-01T12:00:00Z",
+                            "tags": "bookmark,2"
                         }
                     },
                     {

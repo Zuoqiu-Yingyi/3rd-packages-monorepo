@@ -1,26 +1,38 @@
 {
     "type": "root",
     "text": "",
+    "attrs": {
+        "version": "1.0",
+        "id": "root"
+    },
     "children": [
         {
             "type": "folder",
             "text": "",
+            "attrs": {
+                "id": "folder1",
+                "added": "2023-10-01T12:00:00.000Z",
+                "folded": false
+            },
             "children": [
                 {
                     "type": "bookmark",
                     "text": "",
-                    "href": "https://www.python.org",
+                    "attrs": {
+                        "id": "bookmark1",
+                        "added": "2023-10-01T12:00:00.000Z",
+                        "href": "https://www.python.org",
+                        "visited": "2023-10-01T12:00:00.000Z",
+                        "modified": "2023-10-01T12:00:00.000Z",
+                        "tags": "bookmark,1"
+                    },
                     "info": {
                         "metadata": [
                             {
                                 "owner": "John Doe"
                             }
                         ]
-                    },
-                    "id": "bookmark1",
-                    "added": "2023-10-01T12:00:00.000Z",
-                    "visited": "2023-10-01T12:00:00.000Z",
-                    "modified": "2023-10-01T12:00:00.000Z"
+                    }
                 },
                 {
                     "type": "separator"
@@ -32,30 +44,35 @@
                         "owner": "John Doe"
                     }
                 ]
-            },
-            "id": "folder1",
-            "added": "2023-10-01T12:00:00.000Z",
-            "folded": false
+            }
         },
         {
             "type": "folder",
             "text": "",
+            "attrs": {
+                "id": "folder2",
+                "added": "2023-10-01T12:00:00.000Z",
+                "folded": true
+            },
             "children": [
                 {
                     "type": "bookmark",
                     "text": "",
-                    "href": "https://developer.mozilla.org",
+                    "attrs": {
+                        "id": "bookmark2",
+                        "added": "2023-10-01T12:00:00.000Z",
+                        "href": "https://developer.mozilla.org",
+                        "visited": "2023-10-01T12:00:00.000Z",
+                        "modified": "2023-10-01T12:00:00.000Z",
+                        "tags": "bookmark,2"
+                    },
                     "info": {
                         "metadata": [
                             {
                                 "owner": "John Doe"
                             }
                         ]
-                    },
-                    "id": "bookmark2",
-                    "added": "2023-10-01T12:00:00.000Z",
-                    "visited": "2023-10-01T12:00:00.000Z",
-                    "modified": "2023-10-01T12:00:00.000Z"
+                    }
                 },
                 {
                     "type": "separator"
@@ -67,13 +84,9 @@
                         "owner": "John Doe"
                     }
                 ]
-            },
-            "id": "folder2",
-            "added": "2023-10-01T12:00:00.000Z",
-            "folded": true
+            }
         }
     ],
-    "id": "root",
     "info": {
         "metadata": [
             {

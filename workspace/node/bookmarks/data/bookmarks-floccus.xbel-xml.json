@@ -301,19 +301,7 @@
                         }
                     },
                     {
-                        "bookmark": [
-                            {
-                                "title": [
-                                    {
-                                        "$text": "Bookmarks 4-4"
-                                    }
-                                ]
-                            }
-                        ],
-                        ":@": {
-                            "href": "https://4-4.bookmarks.example/",
-                            "id": "44"
-                        }
+                        "separator": []
                     },
                     {
                         "folder": [
@@ -327,6 +315,21 @@
                         ],
                         ":@": {
                             "id": "45"
+                        }
+                    },
+                    {
+                        "bookmark": [
+                            {
+                                "title": [
+                                    {
+                                        "$text": "Bookmarks 4-6"
+                                    }
+                                ]
+                            }
+                        ],
+                        ":@": {
+                            "href": "https://4-6.bookmarks.example/",
+                            "id": "46"
                         }
                     }
                 ],
@@ -350,18 +353,7 @@
                 }
             },
             {
-                "folder": [
-                    {
-                        "title": [
-                            {
-                                "$text": "Folder 6"
-                            }
-                        ]
-                    }
-                ],
-                ":@": {
-                    "id": "6"
-                }
+                "separator": []
             },
             {
                 "bookmark": [

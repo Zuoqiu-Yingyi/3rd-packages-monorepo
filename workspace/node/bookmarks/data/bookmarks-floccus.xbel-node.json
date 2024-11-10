@@ -1,181 +1,238 @@
 {
     "type": "root",
     "text": "",
+    "attrs": {
+        "version": "1.0"
+    },
     "children": [
         {
             "type": "folder",
             "text": "",
+            "attrs": {
+                "id": "1"
+            },
             "children": [
                 {
                     "type": "folder",
                     "text": "",
+                    "attrs": {
+                        "id": "11"
+                    },
                     "children": [
                         {
                             "type": "bookmark",
                             "text": "",
-                            "href": "https://1-1-1.bookmarks.example/",
-                            "id": "111"
+                            "attrs": {
+                                "href": "https://1-1-1.bookmarks.example/",
+                                "id": "111"
+                            }
                         }
-                    ],
-                    "id": "11"
+                    ]
                 },
                 {
                     "type": "folder",
                     "text": "",
+                    "attrs": {
+                        "id": "12"
+                    },
                     "children": [
                         {
                             "type": "bookmark",
                             "text": "",
-                            "href": "https://1-2-1.bookmarks.example/",
-                            "id": "121"
+                            "attrs": {
+                                "href": "https://1-2-1.bookmarks.example/",
+                                "id": "121"
+                            }
                         },
                         {
                             "type": "bookmark",
                             "text": "",
-                            "href": "https://1-2-2.bookmarks.example/",
-                            "id": "122"
+                            "attrs": {
+                                "href": "https://1-2-2.bookmarks.example/",
+                                "id": "122"
+                            }
                         }
-                    ],
-                    "id": "12"
+                    ]
                 },
                 {
                     "type": "folder",
                     "text": "",
+                    "attrs": {
+                        "id": "13"
+                    },
                     "children": [
                         {
                             "type": "bookmark",
                             "text": "",
-                            "href": "https://1-3-1.bookmarks.example/",
-                            "id": "131"
+                            "attrs": {
+                                "href": "https://1-3-1.bookmarks.example/",
+                                "id": "131"
+                            }
                         },
                         {
                             "type": "bookmark",
                             "text": "",
-                            "href": "https://1-3-2.bookmarks.example/",
-                            "id": "132"
+                            "attrs": {
+                                "href": "https://1-3-2.bookmarks.example/",
+                                "id": "132"
+                            }
                         },
                         {
                             "type": "bookmark",
                             "text": "",
-                            "href": "https://1-3-3.bookmarks.example/",
-                            "id": "133"
+                            "attrs": {
+                                "href": "https://1-3-3.bookmarks.example/",
+                                "id": "133"
+                            }
                         }
-                    ],
-                    "id": "13"
+                    ]
                 },
                 {
                     "type": "bookmark",
                     "text": "",
-                    "href": "https://1-4.bookmarks.example/",
-                    "id": "14"
+                    "attrs": {
+                        "href": "https://1-4.bookmarks.example/",
+                        "id": "14"
+                    }
                 },
                 {
                     "type": "bookmark",
                     "text": "",
-                    "href": "https://1-5.bookmarks.example/",
-                    "id": "15"
+                    "attrs": {
+                        "href": "https://1-5.bookmarks.example/",
+                        "id": "15"
+                    }
                 },
                 {
                     "type": "bookmark",
                     "text": "",
-                    "href": "https://1-6.bookmarks.example/",
-                    "id": "16"
+                    "attrs": {
+                        "href": "https://1-6.bookmarks.example/",
+                        "id": "16"
+                    }
                 }
-            ],
-            "id": "1"
+            ]
         },
         {
             "type": "folder",
             "text": "",
-            "children": [],
-            "id": "2"
+            "attrs": {
+                "id": "2"
+            },
+            "children": []
         },
         {
             "type": "folder",
             "text": "",
+            "attrs": {
+                "id": "3"
+            },
             "children": [
                 {
                     "type": "folder",
                     "text": "",
+                    "attrs": {
+                        "id": "31"
+                    },
                     "children": [
                         {
                             "type": "folder",
                             "text": "",
-                            "children": [],
-                            "id": "311"
+                            "attrs": {
+                                "id": "311"
+                            },
+                            "children": []
                         }
-                    ],
-                    "id": "31"
+                    ]
                 }
-            ],
-            "id": "3"
+            ]
         },
         {
             "type": "folder",
             "text": "",
+            "attrs": {
+                "id": "4"
+            },
             "children": [
                 {
                     "type": "folder",
                     "text": "",
-                    "children": [],
-                    "id": "41"
+                    "attrs": {
+                        "id": "41"
+                    },
+                    "children": []
                 },
                 {
                     "type": "bookmark",
                     "text": "",
-                    "href": "https://4-2.bookmarks.example/",
-                    "id": "42"
+                    "attrs": {
+                        "href": "https://4-2.bookmarks.example/",
+                        "id": "42"
+                    }
                 },
                 {
                     "type": "folder",
                     "text": "",
-                    "children": [],
-                    "id": "43"
+                    "attrs": {
+                        "id": "43"
+                    },
+                    "children": []
+                },
+                {
+                    "type": "separator"
+                },
+                {
+                    "type": "folder",
+                    "text": "",
+                    "attrs": {
+                        "id": "45"
+                    },
+                    "children": []
                 },
                 {
                     "type": "bookmark",
                     "text": "",
-                    "href": "https://4-4.bookmarks.example/",
-                    "id": "44"
-                },
-                {
-                    "type": "folder",
-                    "text": "",
-                    "children": [],
-                    "id": "45"
+                    "attrs": {
+                        "href": "https://4-6.bookmarks.example/",
+                        "id": "46"
+                    }
                 }
-            ],
-            "id": "4"
+            ]
         },
         {
             "type": "bookmark",
             "text": "",
-            "href": "https://5.bookmarks.example/",
-            "id": "5"
+            "attrs": {
+                "href": "https://5.bookmarks.example/",
+                "id": "5"
+            }
         },
         {
-            "type": "folder",
-            "text": "",
-            "children": [],
-            "id": "6"
-        },
-        {
-            "type": "bookmark",
-            "text": "",
-            "href": "https://7.bookmarks.example/",
-            "id": "7"
+            "type": "separator"
         },
         {
             "type": "bookmark",
             "text": "",
-            "href": "https://8.bookmarks.example/",
-            "id": "8"
+            "attrs": {
+                "href": "https://7.bookmarks.example/",
+                "id": "7"
+            }
         },
         {
             "type": "bookmark",
             "text": "",
-            "href": "https://9.bookmarks.example/",
-            "id": "9"
+            "attrs": {
+                "href": "https://8.bookmarks.example/",
+                "id": "8"
+            }
+        },
+        {
+            "type": "bookmark",
+            "text": "",
+            "attrs": {
+                "href": "https://9.bookmarks.example/",
+                "id": "9"
+            }
         }
     ]
 }

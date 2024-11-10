@@ -64,19 +64,18 @@
   <folder id="43">
     <title>Folder 4-3</title>
   </folder>
-  <bookmark href="https://4-4.bookmarks.example/" id="44">
-    <title>Bookmarks 4-4</title>
-  </bookmark>
+  <separator />
   <folder id="45">
     <title>Folder 4-5</title>
   </folder>
+  <bookmark href="https://4-6.bookmarks.example/" id="46">
+    <title>Bookmarks 4-6</title>
+  </bookmark>
 </folder>
 <bookmark href="https://5.bookmarks.example/" id="5">
   <title>Bookmarks 5</title>
 </bookmark>
-<folder id="6">
-  <title>Folder 6</title>
-</folder>
+<separator />
 <bookmark href="https://7.bookmarks.example/" id="7">
   <title>Bookmarks 7</title>
 </bookmark>

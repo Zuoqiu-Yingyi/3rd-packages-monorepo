@@ -21,7 +21,7 @@
         <desc>Bookmarks related to programming.</desc>
 
         <!-- Bookmark -->
-        <bookmark id="bookmark1" added="2023-10-01T12:00:00Z" href="https://www.python.org" visited="2023-10-01T12:00:00Z" modified="2023-10-01T12:00:00Z">
+        <bookmark id="bookmark1" added="2023-10-01T12:00:00Z" href="https://www.python.org" visited="2023-10-01T12:00:00Z" modified="2023-10-01T12:00:00Z" tags="bookmark,1">
             <title>Python Official Website</title>
             <info>
                 <metadata owner="John Doe">
@@ -49,7 +49,7 @@
         <desc>Bookmarks related to web development.</desc>
 
         <!-- Bookmark -->
-        <bookmark id="bookmark2" added="2023-10-01T12:00:00Z" href="https://developer.mozilla.org" visited="2023-10-01T12:00:00Z" modified="2023-10-01T12:00:00Z">
+        <bookmark id="bookmark2" added="2023-10-01T12:00:00Z" href="https://developer.mozilla.org" visited="2023-10-01T12:00:00Z" modified="2023-10-01T12:00:00Z" tags="bookmark,2">
             <title>MDN Web Docs</title>
             <info>
                 <metadata owner="John Doe">
