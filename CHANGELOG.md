@@ -1,5 +1,9 @@
 # 更改日志 | Change Log
 
+## 2024-11-12
+
+- 更新 `lint-staged` 配置文件 | Update `lint-staged` configuration file
+
 ## 2024-11-11
 
 - 更新 `XBEL` 格式的书签解析器的测试用例 | Update the test case for the bookmark parser with `XBEL` format
