@@ -1,5 +1,9 @@
 # 更改日志 | Change Log
 
+## 2024-12-13
+
+- 改进解析器单元测试 | Improve parsers unit tests
+
 ## 2024-11-12
 
 - 更新 `lint-staged` 配置文件 | Update `lint-staged` configuration file

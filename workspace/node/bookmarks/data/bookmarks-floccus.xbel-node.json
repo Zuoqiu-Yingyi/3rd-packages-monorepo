@@ -179,7 +179,8 @@
                     "children": []
                 },
                 {
-                    "type": "separator"
+                    "type": "separator",
+                    "attrs": {}
                 },
                 {
                     "type": "folder",
@@ -208,7 +209,8 @@
             }
         },
         {
-            "type": "separator"
+            "type": "separator",
+            "attrs": {}
         },
         {
             "type": "bookmark",

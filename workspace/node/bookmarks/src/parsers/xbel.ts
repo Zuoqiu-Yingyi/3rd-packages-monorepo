@@ -1,5 +1,4 @@
 import {
-    XMLParser,
     XMLValidator,
 
     type X2jOptions,
@@ -21,6 +20,7 @@ import {
     type IXbelInfoNode,
     type IXbelMetadataNode,
     type IXbelNode,
+    type IXbelSeparatorNode,
     type TXbelItemNodeChildren,
 } from "@/bookmark/xbel";
 import {
@@ -29,12 +29,14 @@ import {
     getXmlNodeText,
 } from "@/bookmark/xml";
 
+import { Parser } from "./parser";
+
 export class XBELValidationError extends Error {}
 
 export class XBELParseError extends Error {}
 
-export class XBELParser {
-    public static readonly XMLParserOptions = {
+export class XBELParser extends Parser {
+    public static override readonly XMLParserOptions = {
         preserveOrder: true,
         textNodeName: "$text",
         attributeNamePrefix: "",
@@ -58,15 +60,8 @@ export class XBELParser {
         transformAttributeName: false,
     } as const satisfies X2jOptions;
 
-    public readonly parser: InstanceType<typeof XMLParser>;
-    public readonly validationOptions: Pick<X2jOptions, "allowBooleanAttributes" | "unpairedTags">;
-
     constructor(parserOptions: X2jOptions = XBELParser.XMLParserOptions) {
-        this.parser = new XMLParser(parserOptions);
-        this.validationOptions = {
-            allowBooleanAttributes: parserOptions.allowBooleanAttributes,
-            unpairedTags: parserOptions.unpairedTags,
-        };
+        super(parserOptions);
     }
 
     public parse(xml: string): IRootNode {
@@ -246,11 +241,18 @@ export class XBELParser {
                         items.push(folder);
                         break;
                     }
-                    case XbelTagName.SEPARATOR:
+                    case XbelTagName.SEPARATOR: {
+                        const separator_xbel = xbel_item as IXbelSeparatorNode;
+                        const separator_attrs = separator_xbel[":@"];
                         items.push({
                             type: NodeType.SEPARATOR,
+                            attrs: Object.entries(separator_attrs ?? {}).reduce<Record<string, any>>((attrs, [key, value]) => {
+                                attrs[key] = value;
+                                return attrs;
+                            }, {}),
                         });
                         break;
+                    }
                     default:
                         break;
                 }
