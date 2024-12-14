@@ -8,7 +8,7 @@ const config = {
     "*.{js,ts}": "eslint --fix",
     "*.{css,scss,less,pcss,postcss}": "eslint --fix",
     "*.{jsx,tsx,vue,svelte}": "eslint --fix",
-    "*.{md,htm,html}": "eslint --fix",
+    "*.{md}": "eslint --fix",
     "*.{xml,json,jsonc,json5,yml,yaml,toml}": "eslint --fix",
     "*.{svg,xbel}": "eslint --fix",
 };
