@@ -48,50 +48,50 @@ export interface IValidationOptions {
 }
 
 export interface IXbelTitleNode extends IXmlNode {
-    title: [IXmlLeafNode];
+    [XbelTagName.TITLE]: [IXmlLeafNode];
 }
 
 export interface IXbelDescNode extends IXmlNode {
-    desc: [IXmlLeafNode];
+    [XbelTagName.DESC]: [IXmlLeafNode];
 }
 
 export interface IXbelMetadataNode extends IXmlNode {
-    metadata: [];
+    [XbelTagName.METADATA]: [];
     ":@": {
         owner: string;
     };
 }
 
 export interface IXbelInfoNode extends IXmlNode {
-    info: IXbelMetadataNode[];
+    [XbelTagName.INFO]: IXbelMetadataNode[];
 }
 
 export interface IXbelAliasNode extends IXmlNode {
-    alias: [];
+    [XbelTagName.ALIAS]: [];
     ":@": {
         ref: string;
     };
 }
 
 export interface IXbelSeparatorNode extends IXmlNode {
-    separator: [];
+    [XbelTagName.SEPARATOR]: [];
 }
 
 export interface IXbelBookmarkNode extends IXmlNode {
-    bookmark: TXbelItemInfoNode[];
-    ":@": IXbelItemAttrs & IXbelUrlAttrs;
+    [XbelTagName.BOOKMARK]: TXbelItemInfoNode[];
+    ":@"?: IXbelItemAttrs & IXbelUrlAttrs;
 }
 
 export interface IXbelFolderNode extends IXmlNode {
-    folder: TXbelItemNodeChildren[];
-    ":@": IXbelItemAttrs & {
+    [XbelTagName.FOLDER]: TXbelItemNodeChildren[];
+    ":@"?: IXbelItemAttrs & {
         folded?: TFolded;
     };
 }
 
 export interface IXbelNode extends IXmlNode {
-    xbel: TXbelItemNodeChildren[];
+    [XbelTagName.XBEL]: TXbelItemNodeChildren[];
     ":@": IXbelItemAttrs & {
-        version?: "1.0";
+        version: "1.0";
     };
 }

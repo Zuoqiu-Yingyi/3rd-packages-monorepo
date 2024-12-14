@@ -12,6 +12,12 @@ export type TItemNode =
     | IFolderNode
     | ISeparatorNode;
 
+export type TItemAttrs =
+    & IBookmarkAttrs
+    & IFolderAttrs
+    & ISeparatorAttrs
+    & Record<string, string>;
+
 export interface IBaseNode {
     type: NodeType;
 }
@@ -140,6 +146,13 @@ export interface IBookmarkAttrs extends IItemAttrs {
     nickname?: string;
 
     /**
+     * Netscape:
+     * - folder: `<H3 DESCRIPTION="$0">`
+     * - bookmark: `<A DESCRIPTION="$0">`
+     */
+    description?: string;
+
+    /**
      * Multiple tags separated by commas `,`
      *
      * Netscape:
@@ -154,6 +167,10 @@ export interface IBookmarkAttrs extends IItemAttrs {
      * - bookmark: `<A SHORTCUTURL="$0">`
      */
     shortcut_url?: string;
+}
+
+export interface ISeparatorAttrs extends IItemAttrs {
+    modified?: Date;
 }
 
 export interface IAliasAttrs {
@@ -184,7 +201,7 @@ export interface IBookmarkNode extends IItemNode {
 
 export interface ISeparatorNode extends IBaseNode {
     type: NodeType.SEPARATOR;
-    attrs: Record<string, string>;
+    attrs: ISeparatorAttrs & Record<string, string>;
 }
 
 export interface IAliasNode extends IBaseNode {

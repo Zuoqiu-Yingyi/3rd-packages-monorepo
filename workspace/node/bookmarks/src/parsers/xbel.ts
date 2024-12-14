@@ -74,7 +74,7 @@ export class XBELParser extends Parser {
 
         const xml_objects = this.parser.parse(xml);
         const xbel_object = this._getXbelXmlObject(xml_objects);
-        const root = this._getXbelRootNode(xbel_object);
+        const root = this._getRootNode(xbel_object);
         return root;
     }
 
@@ -99,9 +99,9 @@ export class XBELParser extends Parser {
         throw new XBELParseError("Invalid XBEL XML");
     }
 
-    private _getXbelRootNode(xbel: IXbelNode): IRootNode {
+    private _getRootNode(xbel: IXbelNode): IRootNode {
         const xbel_children = xbel.xbel;
-        const xbel_attrs = xbel[":@"];
+        const xbel_attrs = xbel[":@"] ?? {};
 
         const root: IRootNode = {
             type: NodeType.ROOT,
@@ -163,100 +163,98 @@ export class XBELParser extends Parser {
     private _getItems(xbelItems: TXbelItemNodeChildren[]): TItemNode[] {
         const items: TItemNode[] = [];
         xbelItems.forEach((xbel_item) => {
-            Object.keys(xbel_item).forEach((tag_name) => {
-                switch (tag_name) {
-                    case XbelTagName.ALIAS: {
-                        // TODO: Implement reference to another node
-                        break;
-                    }
-                    case XbelTagName.BOOKMARK: {
-                        const bookmark_xbel = xbel_item as IXbelBookmarkNode;
-                        const bookmark_attrs = bookmark_xbel[":@"];
-                        const bookmark_children = bookmark_xbel[tag_name];
-                        const bookmark: IBookmarkNode = {
-                            type: NodeType.BOOKMARK,
-                            text: this._getXbelItemTitle(bookmark_children) ?? "",
-                            attrs: Object.entries(bookmark_attrs).reduce<Record<string, any>>((attrs, [key, value]) => {
-                                switch (key) {
-                                    case "added":
-                                    case "visited":
-                                    case "modified":
-                                        attrs[key] = new Date(value as string);
-                                        break;
-
-                                    default:
-                                        attrs[key] = value;
-                                        break;
-                                }
-                                return attrs;
-                            }, {}) as IBookmarkAttrs & Record<string, string>,
-                        };
-
-                        const desc = this._getXbelItemDesc(bookmark_children);
-                        if (desc != null) {
-                            bookmark.desc = desc;
-                        }
-                        const info = this._getXbelItemInfo(bookmark_children);
-                        if (info != null) {
-                            bookmark.info = info;
-                        }
-
-                        items.push(bookmark);
-                        break;
-                    }
-                    case XbelTagName.FOLDER: {
-                        const folder_xbel = xbel_item as IXbelFolderNode;
-                        const folder_attrs = folder_xbel[":@"];
-                        const folder_children = folder_xbel[tag_name];
-                        const folder: IFolderNode = {
-                            type: NodeType.FOLDER,
-                            text: this._getXbelItemTitle(folder_children) ?? "",
-                            attrs: Object.entries(folder_attrs).reduce<Record<string, any>>((attrs, [key, value]) => {
-                                switch (key) {
-                                    case "added":
-                                        attrs[key] = new Date(value as string);
-                                        break;
-                                    case "folded":
-                                        attrs[key] = !(value === "no");
-                                        break;
-
-                                    default:
-                                        attrs[key] = value;
-                                        break;
-                                }
-                                return attrs;
-                            }, {}),
-                            children: this._getItems(folder_children),
-                        };
-
-                        const desc = this._getXbelItemDesc(folder_children);
-                        if (desc != null) {
-                            folder.desc = desc;
-                        }
-                        const info = this._getXbelItemInfo(folder_children);
-                        if (info != null) {
-                            folder.info = info;
-                        }
-
-                        items.push(folder);
-                        break;
-                    }
-                    case XbelTagName.SEPARATOR: {
-                        const separator_xbel = xbel_item as IXbelSeparatorNode;
-                        const separator_attrs = separator_xbel[":@"];
-                        items.push({
-                            type: NodeType.SEPARATOR,
-                            attrs: Object.entries(separator_attrs ?? {}).reduce<Record<string, any>>((attrs, [key, value]) => {
-                                attrs[key] = value;
-                                return attrs;
-                            }, {}),
-                        });
-                        break;
-                    }
-                    default:
-                        break;
+            switch (true) {
+                case XbelTagName.ALIAS in xbel_item: {
+                    // TODO: Implement reference to another node
+                    break;
                 }
-            });
+                case XbelTagName.BOOKMARK in xbel_item: {
+                    const bookmark_xbel = xbel_item as IXbelBookmarkNode;
+                    const bookmark_attrs = bookmark_xbel[":@"];
+                    const bookmark_children = bookmark_xbel.bookmark;
+                    const bookmark: IBookmarkNode = {
+                        type: NodeType.BOOKMARK,
+                        text: this._getXbelItemTitle(bookmark_children) ?? "",
+                        attrs: Object.entries(bookmark_attrs ?? {}).reduce<Record<string, any>>((attrs, [key, value]) => {
+                            switch (key) {
+                                case "added":
+                                case "visited":
+                                case "modified":
+                                    attrs[key] = new Date(value as string);
+                                    break;
+
+                                default:
+                                    attrs[key] = value;
+                                    break;
+                            }
+                            return attrs;
+                        }, {}) as IBookmarkAttrs & Record<string, string>,
+                    };
+
+                    const desc = this._getXbelItemDesc(bookmark_children);
+                    if (desc != null) {
+                        bookmark.desc = desc;
+                    }
+                    const info = this._getXbelItemInfo(bookmark_children);
+                    if (info != null) {
+                        bookmark.info = info;
+                    }
+
+                    items.push(bookmark);
+                    break;
+                }
+                case XbelTagName.FOLDER in xbel_item: {
+                    const folder_xbel = xbel_item as IXbelFolderNode;
+                    const folder_attrs = folder_xbel[":@"];
+                    const folder_children = folder_xbel.folder;
+                    const folder: IFolderNode = {
+                        type: NodeType.FOLDER,
+                        text: this._getXbelItemTitle(folder_children) ?? "",
+                        attrs: Object.entries(folder_attrs ?? {}).reduce<Record<string, any>>((attrs, [key, value]) => {
+                            switch (key) {
+                                case "added":
+                                    attrs[key] = new Date(value as string);
+                                    break;
+                                case "folded":
+                                    attrs[key] = !(value === "no");
+                                    break;
+
+                                default:
+                                    attrs[key] = value;
+                                    break;
+                            }
+                            return attrs;
+                        }, {}),
+                        children: this._getItems(folder_children),
+                    };
+
+                    const desc = this._getXbelItemDesc(folder_children);
+                    if (desc != null) {
+                        folder.desc = desc;
+                    }
+                    const info = this._getXbelItemInfo(folder_children);
+                    if (info != null) {
+                        folder.info = info;
+                    }
+
+                    items.push(folder);
+                    break;
+                }
+                case XbelTagName.SEPARATOR in xbel_item: {
+                    const separator_xbel = xbel_item as IXbelSeparatorNode;
+                    const separator_attrs = separator_xbel[":@"];
+                    items.push({
+                        type: NodeType.SEPARATOR,
+                        attrs: Object.entries(separator_attrs ?? {}).reduce<Record<string, any>>((attrs, [key, value]) => {
+                            attrs[key] = value;
+                            return attrs;
+                        }, {}),
+                    });
+                    break;
+                }
+                default:
+                    break;
+            }
         });
         return items;
     }

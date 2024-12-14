@@ -1,33 +1,12 @@
-import { readFile } from "node:fs/promises";
+import {
+    readFile,
+} from "node:fs/promises";
 
 import { describe, expect, it } from "vitest";
 
 import { XBELParser } from "@/parsers/xbel";
 
-function traverseObject(obj: any) {
-    if (Array.isArray(obj)) {
-        obj.forEach((value) => {
-            traverseObject(value);
-        });
-    }
-    else if (typeof obj === "object") {
-        for (const key in obj) {
-            if (Object.prototype.hasOwnProperty.call(obj, key)) {
-                const value = obj[key];
-                switch (key) {
-                    case "added":
-                    case "visited":
-                    case "modified":
-                        obj[key] = new Date(value);
-                        break;
-                    default:
-                        break;
-                }
-                traverseObject(value);
-            }
-        }
-    }
-}
+import { deserializeObject } from "./utils";
 
 describe("xbel parser test", async () => {
     const parser = new XBELParser();
@@ -53,7 +32,7 @@ describe("xbel parser test", async () => {
         // await writeFile("./data/bookmarks-example.xbel-node.json", JSON.stringify(bookmarks, null, 4));
 
         const { default: bookmarks_example_xbel_node_json } = await import("~/data/bookmarks-example.xbel-node.json");
-        traverseObject(bookmarks_example_xbel_node_json);
+        deserializeObject(bookmarks_example_xbel_node_json);
         expect(
             bookmarks,
             "XML parse result",
@@ -82,7 +61,7 @@ describe("xbel parser test", async () => {
         // await writeFile("./data/bookmarks-floccus.xbel-node.json", JSON.stringify(bookmarks, null, 4));
 
         const { default: bookmarks_floccus_xbel_node_json } = await import("~/data/bookmarks-floccus.xbel-node.json");
-        traverseObject(bookmarks_floccus_xbel_node_json);
+        deserializeObject(bookmarks_floccus_xbel_node_json);
         expect(
             bookmarks,
             "XML parse result",

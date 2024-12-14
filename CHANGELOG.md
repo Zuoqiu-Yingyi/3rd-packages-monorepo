@@ -1,5 +1,9 @@
 # 更改日志 | Change Log
 
+## 2024-12-15
+
+- 实现 Netscape 格式的书签的解析器 | Implement a parser for bookmarks in Netscape format
+
 ## 2024-12-14
 
 - 添加 Netscape 格式书签的解析器 | Add parser for bookmarks in Netscape format
