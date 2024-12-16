@@ -12,7 +12,7 @@
                 "id": "root",
                 "added": "1975-05-18T03:36:00.000Z",
                 "modified": "1975-05-18T03:36:00.000Z",
-                "description": "This is a collection of my favorite bookmarks."
+                "desc": "This is a collection of my favorite bookmarks."
             },
             "children": [
                 {
@@ -22,7 +22,7 @@
                         "id": "folder1",
                         "added": "1975-05-18T03:36:00.000Z",
                         "modified": "1975-05-18T03:36:00.000Z",
-                        "description": "Bookmarks related to programming."
+                        "desc": "Bookmarks related to programming."
                     },
                     "children": [
                         {
@@ -31,7 +31,7 @@
                             "attrs": {
                                 "id": "bookmark1",
                                 "href": "https://www.python.org",
-                                "description": "Official website of the Python programming language.",
+                                "desc": "Official website of the Python programming language.",
                                 "added": "1975-05-18T03:36:00.000Z",
                                 "modified": "1975-05-18T03:36:00.000Z",
                                 "tags": "bookmark,1",
@@ -39,8 +39,7 @@
                                 "shortcuturl": "bookmark1",
                                 "icon_url": "https://www.python.org/favicon.ico",
                                 "icon": "data:image/png;base64,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"
-                            },
-                            "desc": "Official website of the Python programming language."
+                            }
                         },
                         {
                             "type": "separator",
@@ -57,7 +56,7 @@
                         "id": "folder2",
                         "added": "1975-05-18T03:36:00.000Z",
                         "modified": "1975-05-18T03:36:00.000Z",
-                        "description": "Bookmarks related to web development."
+                        "desc": "Bookmarks related to web development."
                     },
                     "children": [
                         {
@@ -66,7 +65,7 @@
                             "attrs": {
                                 "id": "bookmark2",
                                 "href": "https://developer.mozilla.org",
-                                "description": "Resources for web developers from Mozilla.",
+                                "desc": "Resources for web developers from Mozilla.",
                                 "added": "1975-05-18T03:36:00.000Z",
                                 "modified": "1975-05-18T03:36:00.000Z",
                                 "tags": "bookmark,2",
@@ -74,15 +73,14 @@
                                 "shortcuturl": "bookmark2",
                                 "icon_url": "https://developer.mozilla.org/favicon.ico",
                                 "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC20lEQVRYR+2WP0hqcRTHvxGWBhU12FgOTQlNFdmkWOkSGkqI1VBLES3pUItGQSAYglvkIFGROqiTmigN1dD/GiIaK4iokCiUILrP84Mrr3cn3/vBWzwgeC96zueec77f360CIBQ//y2qKgCVDlQ68HsHWlpacH5+ziT59vaGxsZGXF5ewmg0lmSq1+uxsbHBrp+enkD/SSaTmJiY+Csp/5ChxWJBJBLB9/c3UqkUK3x8fIzu7u5S8pWVFSwsLOD+/h4PDw/o7e1FNBrF8PDwvwP4/X7Mzs7i5uaGFR4bG5MA7O/vo6+vD9vb21CpVHwBLi4u0NnZifX1dcjlcgmAQqFALpdDbW0tpqenMT4+zg+gqakJz8/PqK6uZon7+/slAFqtFtlslrVarVYzUG4jGBoaQjweZ8mptUtLSxKAxcVFuN1uvLy8QKlU4uDggB+A1+uFw+HA3d0dWltbsbm5Cbvd/mMH6OmpCwRqMplweHjID+Do6AhdXV3Y2trC6OgoWzKbzVYCqKmpYfOvq6uD0+nE6uoqP4D6+nq8vr5CJpNhamoKa2trEgDafFIARU9PDwiYWwcGBweZmVB0dHTg+vpaAkDaJw/4+PgALezX1xc/ANFcSAXkbIIgSAASiQQMBgPS6TQGBgYYLLcOiOYSi8VgNptZ8p2dHYyMjLAd0Gg0bEQNDQ1wuVxYXl7mB1A0F0E0l7m5Ofh8PpY8HA7DarUygJmZGTZzClLB3t4eP4BiQkE0F1LBycmJBCAUCoFk+vn5yeZfKBT4ARSNRSCDeX9/R3NzM1uuPzvw+PgIMiqaOalBDC47kMlkBJ1Oh93dXZAaxBBHcHp6ypyR4DweD+bn5/kCFJMKdMgUQUpWTBUmJyfZwZTP55n5UASDQZydnZUAaGfa2tpwdXWFQCBQul/OF66v5SRhOszKCa4At7e3aG9vL6c+uALQOwKppJzgClBOYfG3FYBKB34B27mqyeVC1XoAAAAASUVORK5CYII="
-                            },
-                            "desc": "Resources for web developers from Mozilla."
+                            }
                         },
                         {
                             "type": "separator",
                             "attrs": {
                                 "id": "separator2",
                                 "href": "http://bookmark.placeholder.url/",
-                                "description": "separator"
+                                "desc": "separator"
                             }
                         }
                     ]

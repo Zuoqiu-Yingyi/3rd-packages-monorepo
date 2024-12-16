@@ -133,9 +133,6 @@ export class NetscapeParser extends Parser {
                             text: getXmlNodeText(a_node.A) ?? "",
                             attrs: bookmark_attrs,
                         };
-                        if ("description" in bookmark.attrs) {
-                            bookmark.desc = bookmark.attrs.description;
-                        }
                         items.push(bookmark);
                     }
                     break;
@@ -203,7 +200,7 @@ export class NetscapeParser extends Parser {
                     attrs.nickname = value as string;
                     break;
                 case "DESCRIPTION":
-                    attrs.description = value as string;
+                    attrs.desc = value as string;
                     break;
                 case "SHORTCUTURL":
                     attrs.shortcuturl = value as string;

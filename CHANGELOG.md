@@ -1,5 +1,9 @@
 # 更改日志 | Change Log
 
+## 2024-12-16
+
+- 调整书签树结构 | Adjust the bookmark tree structure
+
 ## 2024-12-15
 
 - 实现 Netscape 格式的书签的解析器 | Implement a parser for bookmarks in Netscape format

@@ -197,7 +197,7 @@
                     "attrs": {
                         "id": "46",
                         "href": "http://bookmark.placeholder.url/",
-                        "description": "separator"
+                        "desc": "separator"
                     }
                 }
             ]
@@ -229,7 +229,7 @@
             "attrs": {
                 "id": "8",
                 "href": "http://bookmark.placeholder.url/",
-                "description": "separator"
+                "desc": "separator"
             }
         },
         {

@@ -34,15 +34,6 @@ export interface IItemNode extends IBaseNode {
     text: string;
 
     /**
-     * XBEL: `<desc>$0</desc>`
-     *
-     * Netscape:
-     * - folder: `<H3 DESCRIPTION="$0">`
-     * - bookmark: `<A DESCRIPTION="$0">`
-     */
-    desc?: string;
-
-    /**
      * XBEL: `<info>$0</info>`
      */
     info?: IInfo;
@@ -72,6 +63,15 @@ export interface IItemAttrs {
      * - bookmark: `<A ADD_DATE="$0">`
      */
     added?: Date;
+
+    /**
+     * XBEL: `<desc>$0</desc>`
+     *
+     * Netscape:
+     * - folder: `<H3 DESCRIPTION="$0">`
+     * - bookmark: `<A DESCRIPTION="$0">`
+     */
+    desc?: string;
 }
 
 export interface IRootAttrs extends IItemAttrs {
@@ -144,13 +144,6 @@ export interface IBookmarkAttrs extends IItemAttrs {
      * - bookmark: `<A NICKNAME="$0">`
      */
     nickname?: string;
-
-    /**
-     * Netscape:
-     * - folder: `<H3 DESCRIPTION="$0">`
-     * - bookmark: `<A DESCRIPTION="$0">`
-     */
-    description?: string;
 
     /**
      * Multiple tags separated by commas `,`

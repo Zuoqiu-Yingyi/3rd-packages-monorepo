@@ -1,5 +1,6 @@
 import {
     readFile,
+    // writeFile,
 } from "node:fs/promises";
 
 import { describe, expect, it } from "vitest";
@@ -17,7 +18,7 @@ describe("netscape parser test", async () => {
         const bookmarks_xml_objects = parser.parser.parse(bookmarks_xml);
 
         // console.log(JSON.stringify(bookmarks_xml_objects, null, 4));
-        // await writeFile("./data/bookmarks-example.html-xml.json", JSON.stringify(bookmarks_xml_objects, null, 4));
+        // await writeFile("./data/bookmarks-example.html-xml.json", `${JSON.stringify(bookmarks_xml_objects, null, 4)}\n`);
 
         const { default: bookmarks_example_html_xml_json } = await import("~/data/bookmarks-example.html-xml.json");
         expect(
@@ -29,7 +30,7 @@ describe("netscape parser test", async () => {
         const bookmarks = parser.parse(bookmarks_xml);
 
         // console.log(JSON.stringify(bookmarks, null, 4));
-        // await writeFile("./data/bookmarks-example.html-node.json", JSON.stringify(bookmarks, null, 4));
+        // await writeFile("./data/bookmarks-example.html-node.json", `${JSON.stringify(bookmarks, null, 4)}\n`);
 
         const { default: bookmarks_example_html_node_json } = await import("~/data/bookmarks-example.html-node.json");
         deserializeObject(bookmarks_example_html_node_json);
@@ -46,7 +47,7 @@ describe("netscape parser test", async () => {
         const bookmarks_xml_objects = parser.parser.parse(bookmarks_xml);
 
         // console.log(JSON.stringify(bookmarks_xml_objects, null, 4));
-        // await writeFile("./data/bookmarks-floccus.html-xml.json", JSON.stringify(bookmarks_xml_objects, null, 4));
+        // await writeFile("./data/bookmarks-floccus.html-xml.json", `${JSON.stringify(bookmarks_xml_objects, null, 4)}\n`);
 
         const { default: bookmarks_floccus_html_xml_json } = await import("~/data/bookmarks-floccus.html-xml.json");
         expect(
@@ -58,7 +59,7 @@ describe("netscape parser test", async () => {
         const bookmarks = parser.parse(bookmarks_xml);
 
         // console.log(JSON.stringify(bookmarks, null, 4));
-        // await writeFile("./data/bookmarks-floccus.html-node.json", JSON.stringify(bookmarks, null, 4));
+        // await writeFile("./data/bookmarks-floccus.html-node.json", `${JSON.stringify(bookmarks, null, 4)}\n`);
 
         const { default: bookmarks_floccus_html_node_json } = await import("~/data/bookmarks-floccus.html-node.json");
         deserializeObject(bookmarks_floccus_html_node_json);

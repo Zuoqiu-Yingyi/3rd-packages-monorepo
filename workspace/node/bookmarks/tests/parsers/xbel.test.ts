@@ -1,5 +1,6 @@
 import {
     readFile,
+    // writeFile,
 } from "node:fs/promises";
 
 import { describe, expect, it } from "vitest";
@@ -17,7 +18,7 @@ describe("xbel parser test", async () => {
         const bookmarks_xml_objects = parser.parser.parse(bookmarks_xml);
 
         // console.log(JSON.stringify(bookmarks_xml_objects, null, 4));
-        // await writeFile("./data/bookmarks-example.xbel-xml.json", JSON.stringify(bookmarks_xml_objects, null, 4));
+        // await writeFile("./data/bookmarks-example.xbel-xml.json", `${JSON.stringify(bookmarks_xml_objects, null, 4)}\n`);
 
         const { default: bookmarks_example_xbel_xml_json } = await import("~/data/bookmarks-example.xbel-xml.json");
         expect(
@@ -29,7 +30,7 @@ describe("xbel parser test", async () => {
         const bookmarks = parser.parse(bookmarks_xml);
 
         // console.log(JSON.stringify(bookmarks, null, 4));
-        // await writeFile("./data/bookmarks-example.xbel-node.json", JSON.stringify(bookmarks, null, 4));
+        // await writeFile("./data/bookmarks-example.xbel-node.json", `${JSON.stringify(bookmarks, null, 4)}\n`);
 
         const { default: bookmarks_example_xbel_node_json } = await import("~/data/bookmarks-example.xbel-node.json");
         deserializeObject(bookmarks_example_xbel_node_json);
@@ -46,7 +47,7 @@ describe("xbel parser test", async () => {
         const bookmarks_xml_objects = parser.parser.parse(bookmarks_xml);
 
         // console.log(JSON.stringify(bookmarks_xml_objects, null, 4));
-        // await writeFile("./data/bookmarks-floccus.xbel-xml.json", JSON.stringify(bookmarks_xml_objects, null, 4));
+        // await writeFile("./data/bookmarks-floccus.xbel-xml.json", `${JSON.stringify(bookmarks_xml_objects, null, 4)}\n`);
 
         const { default: bookmarks_floccus_xbel_xml_json } = await import("~/data/bookmarks-floccus.xbel-xml.json");
         expect(
@@ -58,7 +59,7 @@ describe("xbel parser test", async () => {
         const bookmarks = parser.parse(bookmarks_xml);
 
         // console.log(JSON.stringify(bookmarks, null, 4));
-        // await writeFile("./data/bookmarks-floccus.xbel-node.json", JSON.stringify(bookmarks, null, 4));
+        // await writeFile("./data/bookmarks-floccus.xbel-node.json", `${JSON.stringify(bookmarks, null, 4)}\n`);
 
         const { default: bookmarks_floccus_xbel_node_json } = await import("~/data/bookmarks-floccus.xbel-node.json");
         deserializeObject(bookmarks_floccus_xbel_node_json);

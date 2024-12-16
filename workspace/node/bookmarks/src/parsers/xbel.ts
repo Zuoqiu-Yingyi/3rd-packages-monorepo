@@ -123,7 +123,7 @@ export class XBELParser extends Parser {
 
         const desc = this._getXbelItemDesc(xbel_children);
         if (desc != null) {
-            root.desc = desc;
+            root.attrs.desc = desc;
         }
         const info = this._getXbelItemInfo(xbel_children);
         if (info != null) {
@@ -193,7 +193,7 @@ export class XBELParser extends Parser {
 
                     const desc = this._getXbelItemDesc(bookmark_children);
                     if (desc != null) {
-                        bookmark.desc = desc;
+                        bookmark.attrs.desc = desc;
                     }
                     const info = this._getXbelItemInfo(bookmark_children);
                     if (info != null) {
@@ -230,7 +230,7 @@ export class XBELParser extends Parser {
 
                     const desc = this._getXbelItemDesc(folder_children);
                     if (desc != null) {
-                        folder.desc = desc;
+                        folder.attrs.desc = desc;
                     }
                     const info = this._getXbelItemInfo(folder_children);
                     if (info != null) {
