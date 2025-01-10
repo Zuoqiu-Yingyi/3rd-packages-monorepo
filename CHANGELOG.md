@@ -1,5 +1,9 @@
 # 更改日志 | Change Log
 
+## 2025-01-11
+
+- 添加 `XBEL` 格式的书签构造器 | Add a builder for bookmarks in `XBEL` format
+
 ## 2024-12-16
 
 - 调整书签树结构 | Adjust the bookmark tree structure

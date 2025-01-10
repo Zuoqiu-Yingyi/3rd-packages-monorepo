@@ -11,7 +11,7 @@ import { deserializeObject } from "./utils";
 
 describe("netscape parser test", async () => {
     const parser = new NetscapeParser();
-    it(`example.html`, async () => {
+    it(`bookmarks-example.html`, async () => {
         const bookmarks_xml = await readFile("./data/bookmarks-example.html", "utf-8");
 
         /* XML objects */
