@@ -3,11 +3,15 @@ import {
     // writeFile,
 } from "node:fs/promises";
 
-import { describe, expect, it } from "vitest";
+import {
+    describe,
+    expect,
+    it,
+} from "vitest";
 
 import { NetscapeParser } from "@/parsers/netscape";
 
-import { deserializeObject } from "./utils";
+import { deserializeObject } from "./../utils";
 
 describe("netscape parser test", async () => {
     const parser = new NetscapeParser();

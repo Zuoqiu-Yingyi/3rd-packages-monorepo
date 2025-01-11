@@ -3,11 +3,15 @@ import {
     // writeFile,
 } from "node:fs/promises";
 
-import { describe, expect, it } from "vitest";
+import {
+    describe,
+    expect,
+    it,
+} from "vitest";
 
 import { XBELParser } from "@/parsers/xbel";
 
-import { deserializeObject } from "./utils";
+import { deserializeObject } from "./../utils";
 
 describe("xbel parser test", async () => {
     const parser = new XBELParser();

@@ -144,7 +144,7 @@ export class XBELParser extends Parser {
     private _getXbelItemDesc(xbelItem: TXbelItemNodeChildren[]): string | undefined {
         const desc_node = findXmlNodeWithTagName(xbelItem, XbelTagName.DESC);
         if (desc_node) {
-            return getXmlNodeText(desc_node);
+            return getXmlNodeText(desc_node[XbelTagName.DESC]!);
         }
         return undefined;
     }

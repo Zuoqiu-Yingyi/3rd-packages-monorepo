@@ -3,7 +3,8 @@
     "text": "",
     "attrs": {
         "version": "1.0",
-        "id": "root"
+        "id": "root",
+        "desc": "This is a collection of my favorite bookmarks."
     },
     "children": [
         {
@@ -12,7 +13,8 @@
             "attrs": {
                 "id": "folder1",
                 "added": "2023-10-01T12:00:00.000Z",
-                "folded": false
+                "folded": false,
+                "desc": "Bookmarks related to programming."
             },
             "children": [
                 {
@@ -24,7 +26,8 @@
                         "href": "https://www.python.org",
                         "visited": "2023-10-01T12:00:00.000Z",
                         "modified": "2023-10-01T12:00:00.000Z",
-                        "tags": "bookmark,1"
+                        "tags": "bookmark,1",
+                        "desc": "Official website of the Python programming language."
                     },
                     "info": {
                         "metadata": [
@@ -53,7 +56,8 @@
             "attrs": {
                 "id": "folder2",
                 "added": "2023-10-01T12:00:00.000Z",
-                "folded": true
+                "folded": true,
+                "desc": "Bookmarks related to web development."
             },
             "children": [
                 {
@@ -65,7 +69,8 @@
                         "href": "https://developer.mozilla.org",
                         "visited": "2023-10-01T12:00:00.000Z",
                         "modified": "2023-10-01T12:00:00.000Z",
-                        "tags": "bookmark,2"
+                        "tags": "bookmark,2",
+                        "desc": "Resources for web developers from Mozilla."
                     },
                     "info": {
                         "metadata": [
