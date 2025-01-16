@@ -62,8 +62,11 @@ export class NetscapeParser extends Parser {
         transformAttributeName: false,
     } as const satisfies X2jOptions;
 
-    constructor(parserOptions: X2jOptions = NetscapeParser.XMLParserOptions) {
-        super(parserOptions);
+    constructor(parserOptions: X2jOptions = {}) {
+        super({
+            ...NetscapeParser.XMLParserOptions,
+            ...parserOptions,
+        });
     }
 
     public parse(html: string): IRootNode {

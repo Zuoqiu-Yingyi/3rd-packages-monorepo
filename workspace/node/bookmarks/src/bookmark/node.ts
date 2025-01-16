@@ -1,3 +1,5 @@
+import type { TXmlAttrs } from "./xml";
+
 export enum NodeType {
     ROOT = "root",
     FOLDER = "folder",
@@ -17,6 +19,12 @@ export type TItemAttrs =
     & IFolderAttrs
     & ISeparatorAttrs
     & Record<string, string>;
+
+export type TItemAttr =
+    | IBookmarkAttrs
+    | IFolderAttrs
+    | ISeparatorAttrs
+    | Record<string, string>;
 
 export interface IBaseNode {
     type: NodeType;
@@ -208,4 +216,24 @@ export interface IInfo {
 
 export interface IMetadata {
     owner: string;
+}
+
+export function nodeAttrs2XmlAttrs<T extends TXmlAttrs>(attrs: TItemAttr): T {
+    const xmlAttrs: Record<string, string> = {};
+    for (const [key, value] of Object.entries(attrs)) {
+        switch (true) {
+            case value instanceof Date:
+                xmlAttrs[key] = value.toISOString();
+                break;
+            case value === null:
+                xmlAttrs[key] = "";
+                break;
+            case value === undefined:
+                break;
+            default:
+                xmlAttrs[key] = value;
+                break;
+        }
+    }
+    return xmlAttrs as T;
 }

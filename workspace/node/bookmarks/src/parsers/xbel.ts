@@ -60,8 +60,11 @@ export class XBELParser extends Parser {
         transformAttributeName: false,
     } as const satisfies X2jOptions;
 
-    constructor(parserOptions: X2jOptions = XBELParser.XMLParserOptions) {
-        super(parserOptions);
+    constructor(parserOptions: X2jOptions = {}) {
+        super({
+            ...XBELParser.XMLParserOptions,
+            ...parserOptions,
+        });
     }
 
     public parse(xml: string): IRootNode {
@@ -136,7 +139,7 @@ export class XBELParser extends Parser {
     private _getXbelItemTitle(xbelItem: TXbelItemNodeChildren[]): string | undefined {
         const title_node = findXmlNodeWithTagName(xbelItem, XbelTagName.TITLE);
         if (title_node) {
-            return getXmlNodeText(title_node);
+            return getXmlNodeText(title_node[XbelTagName.TITLE]!);
         }
         return undefined;
     }

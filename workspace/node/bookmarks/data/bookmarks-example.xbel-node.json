@@ -1,6 +1,6 @@
 {
     "type": "root",
-    "text": "",
+    "text": "My Bookmarks",
     "attrs": {
         "version": "1.0",
         "id": "root",
@@ -9,7 +9,7 @@
     "children": [
         {
             "type": "folder",
-            "text": "",
+            "text": "Programming",
             "attrs": {
                 "id": "folder1",
                 "added": "2023-10-01T12:00:00.000Z",
@@ -19,7 +19,7 @@
             "children": [
                 {
                     "type": "bookmark",
-                    "text": "",
+                    "text": "Python Official Website",
                     "attrs": {
                         "id": "bookmark1",
                         "added": "2023-10-01T12:00:00.000Z",
@@ -52,7 +52,7 @@
         },
         {
             "type": "folder",
-            "text": "",
+            "text": "Web Development",
             "attrs": {
                 "id": "folder2",
                 "added": "2023-10-01T12:00:00.000Z",
@@ -62,7 +62,7 @@
             "children": [
                 {
                     "type": "bookmark",
-                    "text": "",
+                    "text": "MDN Web Docs",
                     "attrs": {
                         "id": "bookmark2",
                         "added": "2023-10-01T12:00:00.000Z",

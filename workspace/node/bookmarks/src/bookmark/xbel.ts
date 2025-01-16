@@ -16,12 +16,6 @@ export enum XbelTagName {
     TITLE = "title",
 }
 
-export type TXbelXmlNodes = [
-    IXmlNode, // ?xml
-    IXmlLeafNode, // !DOCTYPE
-    IXbelNode, // xbel
-];
-
 export type TXbelItemNode =
     | IXbelAliasNode
     | IXbelBookmarkNode
